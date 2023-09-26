@@ -1,6 +1,6 @@
-# watchStore
+# Watch Store
 
-Welcome to a Watch Store project! 
+You can see the project live via this link! [Watch Store](https://watchstorecss.netlify.app/)
 
 This is a showcase of a fully responsive user interface for a watch store, implemented using SASS (Syntactically Awesome Style Sheets) for styling.
 

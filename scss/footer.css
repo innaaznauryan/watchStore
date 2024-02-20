@@ -1,0 +1,141 @@
+.foot1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+  background-color: red;
+}
+.foot1 .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 30px;
+}
+.foot1 i {
+  font-size: 30px;
+  color: white;
+  padding-bottom: 10px;
+}
+.foot1 h2 {
+  font-size: 22px;
+  color: white;
+}
+.foot1 p {
+  color: #d3d1d1;
+}
+
+.foot2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 100px 0;
+}
+.foot2 img {
+  width: 130px;
+}
+.foot2 p {
+  color: gray;
+  padding: 20px 80px 0 0;
+  font-size: 16px;
+}
+.foot2 .div1 {
+  grid-column: 2 span;
+}
+.foot2 h2 {
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+.foot2 li {
+  padding: 10px 0;
+  transition: all 0.5s;
+}
+.foot2 li:hover {
+  transform: translateX(5px);
+}
+.foot2 li:hover a {
+  color: red;
+}
+.foot2 a {
+  color: gray;
+  transition: all 0.5s;
+}
+
+.foot3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 60px;
+}
+.foot3 p {
+  color: gray;
+  font-size: 16px;
+}
+.foot3 p i {
+  color: red;
+}
+.foot3 p a {
+  color: red;
+}
+.foot3 .footIcons {
+  display: flex;
+  gap: 20px;
+}
+.foot3 .footIcons a {
+  color: #222222;
+  font-size: 20px;
+  display: inline-block;
+  transition: all 0.5s;
+}
+.foot3 .footIcons a:hover {
+  transform: rotateY(180deg);
+  color: red;
+}
+
+@media (max-width: 1200px) {
+  .foot1,
+  .foot2,
+  .foot3 {
+    padding: 20px 80px;
+  }
+}
+@media (max-width: 992px) {
+  .foot1 h2,
+  .foot2 h2 {
+    font-size: 16px;
+  }
+  .foot2 p {
+    font-size: 14px;
+  }
+  .foot1 .col1 {
+    padding: 0;
+  }
+  .foot1 {
+    gap: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .foot1 {
+    display: block;
+  }
+  .foot2 {
+    display: block;
+    padding-bottom: 20px;
+  }
+  .foot2 a {
+    font-size: 14px;
+  }
+  .foot2 h2 {
+    padding: 10px 0;
+  }
+  .foot3 p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .foot1 {
+    padding: 20px;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

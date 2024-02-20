@@ -1,0 +1,218 @@
+// --- NAV ---
+nav {
+  box-shadow: 0 0 10px lightgray;
+  background-color: white;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+.navGrid {
+  .imageLogo {
+    width: 120px;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .menu {
+    display: flex;
+    gap: 30px;
+
+    li {
+      height: 80px;
+      position: relative;
+
+      .hot {
+        position: absolute;
+        left: 80%;
+        top: 15%;
+        background-color: red;
+        color: white;
+        border-radius: 7px;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 7px;
+        box-shadow: 0 3px 5px lightgray;;
+      }
+
+      &:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .submenu {
+        border-radius: 10px 10px 0 0;
+        box-shadow: 0 0 5px lightgray;
+        position: absolute;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .5s;
+        transform: translateY(-10px);
+        background-color: white;
+        padding: 20px 0;
+        z-index: 9999;
+
+        li {
+          height: auto;
+          z-index: 999;
+
+          a {
+            padding: 10px;
+          }
+        }
+
+        .red {
+          position: absolute;
+          width: 100%;
+          background-color: red;
+          height: 2px;
+          left: 0;
+          top: 0;
+          border-radius: 10px 10px 0 0;
+
+          &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            transform: rotateZ(45deg) translateY(-50%);
+            position: absolute;
+            left: 15%;
+            top: 0;
+            z-index: -1;
+          }
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      color: black;
+      font-weight: 600;
+      transition: all .5s;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  .navIcons {
+    display: flex;
+    gap: 10px;
+
+    a {
+      color: black;
+      transition: .5s;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+
+.wraper {
+  display: none;
+  text-align: center;
+}
+
+.iconMenu {
+  a {
+    color: black;
+    transition: all .5s;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  .burgerIcon {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .burgerIcon:focus {
+    outline: 0
+  }
+
+  ul {
+    transition: all .5s;
+    transform-origin: top;
+    position: absolute;
+    left: 0;
+    top: 65px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    font-weight: 600;
+    border: 0;
+    box-shadow: 0 0 10px lightgray;
+    animation: hidePopover .5s;
+
+    li {
+      padding: 10px;
+    }
+
+    &:popover-open {
+      animation: showPopover .5s;
+    }
+  }
+}
+
+@keyframes showPopover {
+  from {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0);
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes hidePopover {
+  from {
+    transform: rotateX(0);
+    opacity: 1;
+    display: block;
+  }
+  to {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  nav {
+    padding: 20px 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  nav .navGrid .menu {
+    display: none;
+  }
+  .wraper {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 20px;
+  }
+  nav .navGrid .navIcons a i {
+    font-size: 12px;
+  }
+}

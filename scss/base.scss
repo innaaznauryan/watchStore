@@ -47,38 +47,42 @@ p {
   z-index: 9999;
 }
 
-.btn, .ntb {
+.btn {
   display: inline-block;
   color: white;
   font-size: 18px;
   background-color: #4a4a4b;
   padding: 20px 30px;
-  transition: all 0.5s;
+  transition: all .5s;
   position: relative;
   z-index: 0;
-}
-.btn::after, .ntb::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transform: scaleX(0);
-  transform-origin: left;
-  background-color: red;
-  z-index: -1;
-  transition: all 0.5s;
-}
-.btn:hover::after, .ntb:hover::after {
-  transform: scaleX(1);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: red;
+    z-index: -1;
+    transition: all .5s;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
 }
 
 .ntb {
+  @extend .btn;
   background-color: red;
-}
-.ntb::after {
-  background-color: #4a4a4b;
+
+  &::after {
+    background-color: #4a4a4b;
+  }
 }
 
 .set {
@@ -94,13 +98,15 @@ p {
   justify-content: center;
   align-items: center;
   padding: 30px 0;
+
+  a {
+    color: #444444;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  p {
+    color: red;
+    font-weight: 600;
+  }
 }
-.desc a {
-  color: #444444;
-  font-size: 24px;
-  font-weight: 600;
-}
-.desc p {
-  color: red;
-  font-weight: 600;
-}/*# sourceMappingURL=cssReset.css.map */

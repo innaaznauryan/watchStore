@@ -24,7 +24,8 @@
 }
 .popGrid .popItem .popImage img {
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .popGrid .popItem .popImage .add {
   position: absolute;
@@ -90,6 +91,4 @@
   .popGrid {
     display: block;
   }
-}
-
-/*# sourceMappingURL=popular.css.map */
+}/*# sourceMappingURL=popular.css.map */

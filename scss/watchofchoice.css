@@ -19,7 +19,8 @@
 }
 .watchGrid .watchImage img {
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .reverse {
@@ -53,6 +54,4 @@
   .ntb {
     white-space: nowrap;
   }
-}
-
-/*# sourceMappingURL=watchofchoice.css.map */
+}/*# sourceMappingURL=watchofchoice.css.map */

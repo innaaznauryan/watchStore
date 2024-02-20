@@ -25,7 +25,8 @@
 }
 .imageGal img {
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transform: scale(1.2);
   transition: all 0.5s;
 }
@@ -50,6 +51,4 @@
   .galleryGrid .imageGal {
     margin: 10px;
   }
-}
-
-/*# sourceMappingURL=gallery.css.map */
+}/*# sourceMappingURL=gallery.css.map */

@@ -20,7 +20,8 @@ h2 {
 }
 .newGrid .new .imageNew img {
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 0.5s;
 }
 
@@ -44,6 +45,4 @@ h2 {
   .pad {
     padding: 20px;
   }
-}
-
-/*# sourceMappingURL=arrivals.css.map */
+}/*# sourceMappingURL=arrivals.css.map */

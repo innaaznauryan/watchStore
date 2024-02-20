@@ -26,7 +26,8 @@ header .headerFlex {
 }
 .headerImage img {
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 1200px) {
@@ -52,6 +53,4 @@ header .headerFlex {
   header {
     padding: 20px;
   }
-}
-
-/*# sourceMappingURL=header.css.map */
+}/*# sourceMappingURL=header.css.map */
